@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IKEA</title>
+  <link rel="stylesheet" href="./css/1_jquery.bxslider.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script defer src="./js/jquery-3.3.1.min.js"></script> 
+  <script defer src="./js/jquery.bxslider.js"></script> 
+  <script defer src="./js/script.js"></script>
+  <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</head>
+<body>
+  <div id="wrap">
+      <!-- HEADER -->
+      <header>
+          <div class="align">
+              <div class="logo">
+                  <h1>
+                      <a href="javascript:void(0)"> 
+                          <img src="./img/logo_header.png" alt="이케아 로고">
+                      </a>
+                  </h1>
+              </div>
+              <nav>
+                  <div class="brand">
+                      <a href="javascript:void(0)">모든 제품</a>
+                        <ul class="basic">    
+                          <li><a href="javascript:void(0)">신제품</a></li>
+                          <li><a href="javascript:void(0)">베스트 셀러</a></li>
+                          <li><a href="javascript:void(0)">할인중</a></li>
+                          <li><a href="javascript:void(0)">테마별 제품 보기</a></li>
+                          <li><a href="javascript:void(0)">지속가능한 제품 보기</a></li>
+                        </ul>
+                  </div>
+                  <div class="online_showroom">
+                      <a href="javascript:void(0)">온라인 쇼룸</a>
+                      <ul class="showroom">
+                          <li>
+                              <ul class="showroom1">
+                                      <li><a href="javascript:void(0)">침실</a></li>
+                                      <li><a href="javascript:void(0)">거실</a></li>
+                                      <li><a href="javascript:void(0)">주방</a></li>
+                                      <li><a href="javascript:void(0)">어린이 IKEA</a></li>
+                              </ul>
+                          </li>
+                          <li>
+                              <ul class="showroom2">              
+                                  <li><a href="javascript:void(0)">홈 오피스</a></li>              
+                                  <li><a href="javascript:void(0)">다이닝</a></li>
+                                  <li><a href="javascript:void(0)">욕실</a></li>
+                                  <li><a href="javascript:void(0)">현관</a></li>
+                              </ul>
+                          </li>
+                          <li>
+                              <ul class="showroom3">
+                                  <li><a href="javascript:void(0)">세탁실</a></li>
+                                  <li><a href="javascript:void(0)">베란다/야외공간</a></li>
+                                  <li><a href="javascript:void(0)">IKEA for Business</a></li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="special_price">
+                      <a href="javascript:void(0)">특별한 가격</a>
+                        <ul class="basic">
+                          <li><a href="javascript:void(0)">특별한 가격</a></li>
+                          <li><a href="javascript:void(0)">IKEA Family 특별가</a></li>
+                          <li><a href="javascript:void(0)">가장 낮은 가격</a></li>
+                          <li><a href="javascript:void(0)">마지막 기회</a></li>
+                          <li><a href="javascript:void(0)">침대프레임 특가 제품</a></li>
+                        </ul>
+                  </div>
+                  <div class="none_area">
+                      <a href="javascript:void(0)">홈 액세서리</a>
+                  </div>
+                  <div class="none_area">
+                      <a href="javascript:void(0)">서비스</a>
+                  </div>
+              </nav>
+              <div class="subnav">
+                  <div class="search">
+                  <input type="text" placeholder="search">
+                  <button>
+                      <img src="./img/01_2_header_subnav_search.png" alt="search icon" id="searchicon">
+                  </button>
+                  </div>
+                  <div class="shopping">
+                      <button>
+                          <img src="./img/01_3_header_subnav_login.png" alt="login icon">
+                      </button>
+                      <button>
+                          <img src="./img/01_4_header_subnav_favorite.png" alt="favorite icon">
+                      </button>
+                      <button>
+                          <img src="./img/01_5_header_subnav_cart.png" alt="cart icon">
+                      </button>
+                  </div>
+
+              </div>
+          </div>
+          <!-- HEADER_TABLETMENU -->
+          <div class="headerTabletMenu">
+              <div class="tmclick">
+                  <div class="xbtn">
+                      <span class="bar01"></span>
+                      <span class="bar02"></span>
+                      <span class="bar03"></span>
+                  </div>
+              </div>
+              <div class="tmport">
+                  <button>
+                      <div class="xbtn2">
+                          <span class="bar01"></span>
+                          <span class="bar02"></span>
+                          <span class="bar03"></span>
+                      </div>
+                  </button>
+                  <ul>
+                      <li><a href="javascript:void(0)">모든 제품</a></li>
+                      <li><a href="javascript:void(0)">온라인 쇼룸</a></li>
+                      <li><a href="javascript:void(0)">특별한 가격</a></li>
+                      <li><a href="javascript:void(0)">홈 액세서리</a></li>
+                      <li><a href="javascript:void(0)">서비스</a></li>
+                  </ul>
+              </div>
+          </div>
+      </header>
+      <!-- MAIN -->
+      <main>
+          <div class="mslide">
+              <div class="mbn1">
+                  <div class="mainbg"></div>
+                  <img src="./img/slide1.jpg" alt="메인이미지1">
+                  <div class="mtext">
+                      <h2>IKEA와 함께하는 새 출발</h2>
+                      <p>연인과 함께 매장을 둘러보며 결혼생활을 상상해봤던 경험, <br>
+                          모두 한 번쯤은 있을 거예요. <br>
+                          그 상상을 실현시키기로 마음먹었다면, <br>
+                          IKEA가 준비한 제안을 확인해보세요.</p>
+                      <a href="javascript:void(0)">새 출발 준비하기</a>
+                  </div>
+              </div>
+              <div class="mbn2">
+                  <div class="mainbg"></div>
+                  <img src="./img/slide2.jpg" alt="메인이미지2">
+                  <div class="mtext">
+                      <h2>신혼부부를 위한 침대 프레임 15% 할인</h2>
+                      <p>4월 6일부터 5월 31일까지 신혼집을 위한 가구를 찾고 있다면 <br>
+                          단연 침대가 가장 중요하죠. <br>
+                          다양한 스타일과 가격대의 침대 프레임에서 <br> 
+                          딱 맞는 프레임을 골라 편안하고 아늑한 침실을 만들어 보세요.</p>
+                      <a href="javascript:void(0)">침실 꾸미러가기</a>
+                  </div>
+              </div>
+              <div class="mbn3">
+                  <div class="mainbg"></div>
+                  <img src="./img/slide3.jpg" alt="메인이미지3">
+                  <div class="mtext">
+                      <h2>더 쾌적한 공간을 위한 거실 가구 최대 30% 할인</h2>
+                      <p> 3월 30일부터 5월 17일까지 다양한 스타일과 크기의 거실 가구로 <br>
+                          새집에 좀 더 쾌적한 공간을 만들어보세요. <br>
+                          디자인적으로도 멋지며, 기능적으로도 탁월합니다. <br> 
+                          예산과 공간에 맞게 고르실 수 있습니다. </p>
+                      <a href="javascript:void(0)">거실 꾸미러가기</a>
+                  </div>
+              </div>
+          </div>
+      </main>
+      <section>
+          <div id="content1">
+              <div class="cont1bg"></div>
+              <div class="align">
+                  <div class="cont1img">
+                      <img src="./img/03_content01.jpg" alt="">
+                  </div>
+                  <div class="cont1text">
+                      <img src="./img/03_content01_homeicon.png" alt="홈아이콘">
+                    <img src="./img/03_content01_homeicon2.png" alt="홈아이콘" class="active">
+                      <h3>톡톡 튀는 아이디어의 <br>
+                      매력적인 아파트 </h3>
+                      <p>
+                          낮에는 아이들과 상상력을 키우고, 밤에는 어른들이 손님과<br> 
+                          즐겁게 어울릴 수 있게 꾸민 이 아파트를 둘러보세요. <br><br>
+                          조절이 가능한 공간과 뛰어난 정리 감각, <br>
+                          그리고 다른 사람을 배려하는 마음이면 충분하죠. <br></p>
+                      <a href="javascript:void(0)">이 집을 구경해보세요</a>
+              </div>
+          </div>
+          </div>
+          <div id="content2" class="align">
+              <h2>다양한 IKEA 서비스</h2>
+              <ul>
+                  <li>
+                  <a href="javascript:void(0)"></a>
+                  <div class="cont2imgbox">
+                      <img src="./img/pic1.jpg" alt="배송">
+                  </div>
+                  <div class="cont2name">
+                      배송 서비스
+                  </div>
+                  </li>
+                  <li>
+                  <a href="javascript:void(0)"></a>
+                  <div class="cont2imgbox">
+                      <img src="./img/pic2.jpg" alt="설치">
+                  </div>
+                  <div class="cont2name">
+                      설치 서비스
+                  </div>
+                  </li>
+                  <li>
+                  <a href="javascript:void(0)"></a>
+                  <div class="cont2imgbox">
+                      <img src="./img/pic3.jpg" alt="주방">
+                  </div>
+                  <div class="cont2name">
+                      주방 서비스
+                  </div>
+                  </li>
+                  <li>
+                  <a href="javascript:void(0)"></a>
+                  <div class="cont2imgbox">
+                      <img src="./img/pic4.jpg" alt="더보기">
+                  </div>
+                  <div class="cont2name">
+                      모든 서비스 보기
+                  </div>
+                  </li>
+              </ul>
+          </div>
+          <div id="content3" class="align">
+              <h2>추천 제품</h2>
+              <div class="bxcover">
+                  <ul>
+                    <li>
+                        <a href="javascript:void(0)"></a>
+                        <div class="cont3imgbx">
+                            <img src="./img/thumb1.jpg" alt="제품이미지1">
+                        </div>
+                        <div class="cont3txtbx">
+                            <div class="bxt1">PÄRKLA 페르클라</div>
+                            <div class="bxt2">수납박스, 55x49x19 cm</div>
+                            <div class="bxt3">￦3,000</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"></a>
+                        <div class="cont3imgbx">
+                            <img src="./img/thumb2.jpg" alt="제품이미지2">
+                        </div>
+                        <div class="cont3txtbx">
+                            <div class="bxt1">RENSHACKA 렌스하카</div>
+                            <div class="bxt2">옷커버</div>
+                            <div class="bxt3">￦900</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"></a>
+                        <div class="cont3imgbx">
+                            <img src="./img/thumb3.jpg" alt="제품이미지3">
+                        </div>
+                        <div class="cont3txtbx">
+                            <div class="bxt1">PÄRKLA 페르클라</div>
+                            <div class="bxt2">신발가방, 48x22 cm</div>
+                            <div class="bxt3">￦1,000</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"></a>
+                        <div class="cont3imgbx">
+                            <img src="./img/thumb4.jpg" alt="제품이미지4">
+                        </div>
+                        <div class="cont3txtbx">
+                            <div class="bxt1">DIMPA 딤파</div>
+                            <div class="bxt2">수납가방, 65x22x65 cm</div>
+                            <div class="bxt3">￦4,900</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"></a>
+                        <div class="cont3imgbx">
+                            <img src="./img/thumb5.jpg" alt="제품이미지5">
+                        </div>
+                        <div class="cont3txtbx">
+                            <div class="bxt1">FRAKTA 프락타</div>
+                            <div class="bxt2">카트용트렁크, 73x35x30 cm</div>
+                            <div class="bxt3">￦4,900</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"></a>
+                        <div class="cont3imgbx">
+                            <img src="./img/thumb6.jpg" alt="제품이미지6">
+                        </div>
+                        <div class="cont3txtbx">
+                            <div class="bxt1">NOJIG 노이그</div>
+                            <div class="bxt2">정리함, 10x20x5 cm</div>
+                            <div class="bxt3">￦800</div>
+                        </div>
+                    </li>
+                  </ul>
+              </div>
+              <div class="morebtn">
+                  <a href="javascript:void(0)">더많은 제품 보기</a>
+              </div>
+          </div>
+      </section>
+      <footer>
+          <div class="align">
+          <div class="footernav">
+              <ul>
+                  <li><a href="javascript:void(0)">고객문의</a></li>
+                  <li><a href="javascript:void(0)">쇼핑하기</a></li>
+                  <li><a href="javascript:void(0)">서비스</a></li>
+                  <li><a href="javascript:void(0)">IKEA 이야기</a></li>
+              </ul>
+          </div>
+          <div class="footerlogo">
+              <h2>
+                  <a href="javascript:void(0)">
+                      <img src="./img/logo_footer.png" alt="로고이미지">
+                  </a>
+              </h2>
+          </div>
+              <address>
+                  <h6>IKEA 코리아</h6>
+                  <p>
+                  주소 : (우) 14352 경기도 광명시 일직로 17 IKEA광명점 <br>
+                  사업자 등록번호 : 106-86-82871 사업자정보확인 | 대표자 : 프레드릭 요한손 <br>
+                  통신판매업 신고 : 2018-경기광명-0209 | TEL : 1670-4532 
+                  </p>
+                  <h6>
+                      © Inter IKEA Systems B.V 1999-2023
+                  </h6>
+              </address>
+          </div>
+      </footer>
+      <button class="topbtn">⇧
+          <br>Top
+      </button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,789 @@
+ @charset "UTF-8";
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+*{     
+  padding: 0;
+  margin: 0;
+  word-break: keep-all; 
+}
+html,body{
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-family: 'Pretendard-Regular';
+  color: #000;
+}
+ul{
+  list-style: none;
+}
+a{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+img{
+  vertical-align: bottom;
+}
+button{
+  border: none;
+  background: transparent;
+}
+address{
+  font-style: normal;
+}
+
+#wrap{
+  width: 100%;
+}
+.align{
+  max-width: 1300px;
+  /* 반응형웹으로 제작할 것 이므로 변동의 여지가 있는 최대값으로 가로를 준다. */
+  margin: auto;  
+}  
+
+header{
+  width: 100%;
+  position: absolute;
+  background: #fff;
+  height: 60px;
+  z-index: 10;
+}
+header .align{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+header .logo{}
+header .logo h1{}
+header .logo h1 a{
+  padding: 1rem 0;
+}
+header .logo h1 img{
+  width: 100px;
+}
+header nav{
+  width: 50%;
+  display: flex;
+  /* text-align: center; */
+  justify-content: space-between;
+}
+header nav>div{
+  position:relative;
+}
+header nav>div>a{
+  font-size: 1.3rem;
+  font-weight: 800;
+  padding: 0.8rem 0 0.6rem;
+  border-bottom: 2px solid transparent;
+  transition:0.6s;
+}
+header nav>div:hover>a{
+  font-weight: 800;
+  border-bottom: 2px solid #000;
+}
+header nav>div>ul{
+  /* display:none; */
+  width: 200px;
+  position: absolute;
+  top: 60px;
+  left:-10px;
+  box-sizing: border-box;
+  opacity:0;
+}
+header nav>div>ul a{}
+
+header nav .showroom{
+  /* display: flex; */
+}
+header nav div>ul li{
+  padding: 0 0px;
+  float:left;
+}
+header nav>div>ul li a{
+  width: 130px;
+  font-size: 1.1rem;
+  padding: 0.6rem 1rem;
+  font-weight: 400;
+}
+header nav>div ul.basic li:hover a{
+  font-weight: 800;
+  color: #0058ab;
+}
+header nav>div ul.showroom ul li:hover a{
+  font-weight: 800;
+  color: #0058ab;
+}
+
+header .subnav{
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
+  /* margin-top: 0.6rem; */
+}
+header .search{
+  width: 50%;
+  height: 24px;
+  margin-bottom: 0.3rem;
+  position:relative;
+}
+header .search input{
+  width: 80%;
+  height: 24px;
+  padding-left: 20px;
+  border: 2px solid #131313;
+  border-radius: 30px;
+
+}
+header .search input::placeholder{
+  margin-left: 20px;
+  color:#999;
+}
+#searchicon{
+  position:absolute;
+  width: 22px;
+  right: 15px;
+  top: 3px;
+}
+header .shopping{
+  margin-left: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+header .shopping img{
+  width: 24px;
+  padding: 0.5rem;
+}
+header .shopping>button:hover img{
+  background: #ddd;
+  border-radius: 10px;
+}
+/* HEADER TABLETMENU */
+.headerTabletMenu{
+  display: none;
+}
+.headerTabletMenu .tmclick{
+  position: absolute;
+  top: 1.6rem;
+  right: 4rem;
+  transition: 0.6s;
+}
+.headerTabletMenu .tmclick .xbtn{
+  cursor: pointer;
+}
+.headerTabletMenu .tmclick .xbtn>span{
+  display: block;
+  width: 30px;
+  height: 5px;
+  background: #0058ab;
+  margin-bottom: 5px;
+  transition: 0.6s;
+  /* transform: translate3px; */
+}
+.headerTabletMenu .tmclick .xbtn:hover .bar01{
+  transform:rotate(90deg) translate(10px,0px);
+}
+.headerTabletMenu .tmclick .xbtn:hover .bar02{
+  opacity:0;
+}
+.headerTabletMenu .tmclick .xbtn:hover .bar03{
+  transform:rotate(0deg) translate(0px,-10px);
+}
+/* .headerTabletMenu .tmclick .xbtn:hover{
+  transform: rotate(45deg);
+} */
+.headerTabletMenu .tmport{
+  position: fixed;
+  /* 메뉴 전체 화면이 스크롤 움직임이나 화면 크기 변동에 
+  상관없이 항상 전체 크기를 차지할 수 있도록 하기 위함 */
+  background: #ffffff;
+  color: #000;
+  top: 5rem;
+  left: 0;
+  height: 500px;
+  right: 0;
+  display: none;
+}
+.headerTabletMenu .tmport button{
+  position: absolute;
+  right: 40px;
+  top: -45px;
+  width: 40px;
+  height: 40px;  
+}
+.headerTabletMenu .tmport .xbtn2>span{
+  display: block;
+  width: 30px;
+  height: 5px;
+  background: #0058ab;
+  margin-bottom: 5px;
+  transition: 0.6s;
+  /* transform: translate3px; */
+}
+.headerTabletMenu .tmport .xbtn2{
+  transition: 0.6s;
+}
+.headerTabletMenu .tmport .xbtn2 .bar01{
+  transform:rotate(90deg) translate(10px,0px);
+}
+.headerTabletMenu .tmport .xbtn2 .bar02{
+  opacity:0;
+}
+.headerTabletMenu .tmport .xbtn2 .bar03{
+  transform:rotate(0deg) translate(0px,-10px);
+}
+.headerTabletMenu .tmport .xbtn2:hover{
+  transform:rotate(45deg)
+}
+.headerTabletMenu .tmport ul{
+  margin-top: 6rem;
+  text-align: center;
+  opacity: 0.8;
+}
+.headerTabletMenu .tmport ul li{}
+.headerTabletMenu .tmport ul li a{
+  padding: 0.6rem 0;
+  margin-bottom: 30px;
+  display: inline-block;
+  font-size: 1.8rem;
+  /* line-height: 60px; */
+  border-bottom: 3px solid transparent;
+  font-weight: 800;
+  transition: 0.6s;
+}
+.headerTabletMenu .tmport ul li a:hover{
+  border-bottom: 3px solid #0058ab;
+  color:  #0058ab;
+}
+
+
+/* MAIN */
+main{
+  position : relative;
+  transition: 0.6s;
+}
+main:hover .mainbg{
+  position: absolute;
+  background: #00000070;
+  width: 100%;
+  height: 100%;
+}
+main .mtext{
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  margin: auto;
+}
+main .mtext h2{
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px #464646;
+}
+main .mtext p{
+  margin: 2.4rem 0 3.6rem;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #fff;
+  text-shadow: 1px 1px #464646
+}
+main .mtext a{
+  display: inline;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  text-shadow: 1px 1px #464646;
+  box-shadow: 1px 1px #464646;
+  transition:0.6s;
+}
+main .mtext a:hover{
+background: #fff;
+color: #000;
+text-shadow: none;
+box-shadow: none;
+}
+
+/* SECTION */
+section{}
+#content1{
+  width: 100%;
+  height: 500px;
+  position: relative;
+  margin-bottom: 4rem;
+}
+#content1 .cont1bg{
+  /* position: absolute; */
+  top: 0;
+  background: #0058ab;
+  width: 100%;
+  height: 235px;
+}
+#content1 .align{
+  position:absolute;
+  display: flex;
+  padding: 0 1rem;
+  top: 10%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  height: 400px;
+}
+#content1 .cont1img{
+  width: 60%;
+}
+#content1 .cont1img img{
+  display: block;
+  margin: auto;
+  padding: 40px;
+}
+
+#content1 .cont1text{
+  margin-left:3rem;
+  width: 40%;
+}
+#content1 .cont1text img{
+  margin: 4.4rem 0 1rem;
+}
+#content1 .cont1text .active{
+  display: none;
+}
+#content1 .cont1text h3{
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  font-size: 2rem;
+}
+
+#content1 .cont1text p{
+  font-size: 1.3rem;
+  margin: 3.3rem 0;
+}
+#content1 .cont1text a{
+  display: inline;
+  font-size: 1.3rem;
+  font-weight: 800;
+  border: 2px solid #0058ab;
+  color: #0058ab;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  transition: 0.6s;
+}
+#content1 .cont1text a:hover{
+  color: #fff;
+  background: #0058ab;
+}
+#content2{
+  width: 100%;
+  height: 300px;
+}
+#content2 h2{
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0 auto 2.4rem;
+} 
+#content2 ul{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+} 
+#content2 ul li{
+  /* border: 1px solid #000; */
+  border-radius: 10px;
+  position: relative;
+}
+#content2 ul li a{
+  position: absolute;
+  height: 240px;
+  width: 300px;
+  z-index: 1;
+}
+#content2 ul li .cont2imgbox{
+  width: 300px;
+  height: 180px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+} 
+#content2 ul li .cont2imgbox img{
+  transition:0.6s;
+} 
+#content2 ul li:hover .cont2imgbox img{
+  transform: scale(1.1);
+} 
+#content2 ul li:last-child .cont2imgbox{
+  border: 3px solid #0058ab;
+} 
+#content2 ul li:last-child:hover .cont2imgbox img{
+  background: url("/img/pic4_hover.jpg");
+} 
+#content2 .cont2name {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  font-weight: 800;
+  text-align: center;
+  color: #000;
+  transition:0.6s;
+} 
+#content2 ul li:hover .cont2name{
+  color: #0058ab;
+  font-weight: 800;
+}
+#content3{
+  margin-top: 6rem;
+}
+#content3 h2{
+  font-size: 2.2rem;
+  margin-bottom: 2.4rem;
+}
+#content3 .bxcover{}
+#content3 .bxcover ul{;
+}
+#content3 .bxcover ul li{
+  position: relative;
+  width: 300px;
+  height: 100%;
+  height: auto;
+  overflow:hidden;
+
+}
+#content3 .bxcover ul li a{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+#content3 .bxcover ul li .cont3imgbx{
+  overflow:hidden;
+  
+}
+#content3 .bxcover ul li .cont3imgbx img{
+  width: 300px;
+  transition: 0.6s;
+}
+#content3 .bxcover ul li:hover .cont3imgbx img{
+  transform: scale(1.1);
+}
+#content3 .bxcover ul li .cont3txtbx{
+  margin: 2.4rem 0;
+}
+#content3 .cont3txtbx .bxt1{
+  font-size: 1.2rem;
+}
+#content3 .cont3txtbx .bxt2{
+  margin: .3rem 0;
+}
+#content3 .cont3txtbx .bxt3{
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px 0;
+}
+#content3 .bxcover ul li .cont3txtbx .bxt3::after{
+  display: block;
+  content: '';
+  height: 10px;
+  background: yellow;
+  margin:-15px 0;
+  opacity: 0;
+  transition: .3s;
+  width: 0;
+}
+#content3 .bxcover ul li:hover .cont3txtbx .bxt3::after{
+  opacity: 1;
+  width: 100px;
+ }
+#content3 .morebtn{
+  text-align: center;
+}
+
+#content3 .morebtn a{
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  padding: 1rem 1.5em;
+  margin-top: 30px;
+  color: #0058ab;
+  border: 2px solid #0058ab;
+  border-radius: 50px;
+  transition: 0.6s;
+}
+#content3 .morebtn a:hover{
+  background-color: #0058ab;
+  color: #fff;
+}
+
+footer{
+  margin-top: 5rem;
+  padding: 3rem 0;
+  background-color: #0058ab;
+  width: 100%;
+}
+footer .footernav{}
+footer .footernav ul{
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+footer .footernav ul li{
+  text-align: center;
+}
+footer .footernav ul li a{
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fff;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid transparent;
+  transition: 0.6s;
+}
+footer .footernav ul li a:hover{
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+footer .footerlogo{
+  text-align: center;
+}
+footer .footerlogo img{
+  padding: 3rem;
+  width: 100px;
+  margin-top: 1rem;
+}
+footer address{
+  text-align: center;
+  color: #fff;
+}
+footer address h6{
+  margin: 3rem 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+footer address p{
+  font-weight: 200;
+  line-height: 1.6;
+}
+.topbtn{
+  position: fixed;
+  /* 화면크기 변경이나 스크롤 위치에 상관없이 
+  내가 지정한 위치에 그대로 고정시키기 위해서!
+  만약 화면에서 보이지 않다면 위치값부터 주면 좋음 */
+  right: 2rem;
+  bottom: 2rem;
+  color: #0058ab;
+  background: #fff;
+  font-size: 1.6rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #0058ab;
+  display: none;
+}
+
+@media screen and (max-width:1000px){
+
+  main .mtext{
+    position: absolute;
+    top: 33%;
+    left: 10%;
+    margin: auto;
+  }
+  main .mtext h2{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 1px 1px #464646;
+  }
+  main .mtext p{
+    margin: 2.4rem 0 3.6rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #fff;
+    text-shadow: 1px 1px #464646
+  }
+  main .mtext a{
+    display: inline;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    text-shadow: 1px 1px #464646;
+    box-shadow: 1px 1px #464646;
+    transition:0.6s;
+  }
+  #content1 .align{
+    position: static;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: auto;   
+  }
+  #content1 .cont1text{
+    width: 70%;
+    text-align: center;
+  } 
+  #content1 .cont1text img{
+    display:none;
+  }
+  #content1 .cont1text .active{
+    display:inline-block;
+     margin: auto;
+     margin: 4.4rem 0 2rem;
+  }
+  #content1 .cont1text h3{
+    color: #000;
+  } 
+  #content1 .cont1img{
+    width: 100%;
+    margin-left: 0;    
+  }
+  #content2 h2{
+    margin-top: 500px;
+    padding:0 3rem;
+  }
+  #content2 ul{
+    padding: 0 2rem;
+  }
+  #content2 ul li{
+    width: 50%;
+    padding: 10px;
+  }
+  #content3{
+    margin-top: 20px;
+    padding:6rem 3rem;
+  }
+}
+
+@media screen and (max-width:768px){
+  header .search, header nav, header .subnav{
+    display: none;
+  }
+  header .logo{
+    text-align: center;
+    width: 100%;
+    padding: 0 0 5px 0;
+  }
+  .headerTabletMenu {
+    display: block;
+  }
+  .headerTabletMenu .tmclick{
+    display: block;
+  }
+  main .mtext{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+  }
+  main .mtext h2{
+    /* position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 50%; */
+    margin-top: 55px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 1px 1px #464646;
+    text-align: center;
+    transition: 0.6s;
+  }
+  main:hover .mtext h2{
+    margin-top: 0;
+  }
+  main .mtext p{
+    opacity: 0;
+    margin: 2.4rem 0 3.6rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #fff;
+    text-shadow: 1px 1px #464646;
+    transition:0.6s;  
+  }
+  main:hover .mtext p{
+    opacity: 1;
+  }
+  main .mtext a{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    text-shadow: 1px 1px #464646;
+    box-shadow: 1px 1px #464646;
+    transition:0.6s;
+    opacity: 0;
+  }
+  main:hover .mtext a{
+    opacity: 1;
+  }
+  #content1 .align{
+    position: static;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: auto;   
+  }
+  #content1 .cont1text{
+    width: 70%;
+    text-align: center;
+  } 
+  #content1 .cont1text img{
+    display:none;
+  }
+  #content1 .cont1text .active{
+    display:inline-block;
+     margin: auto;
+     margin: 4.4rem 0 2rem;
+  }
+  #content1 .cont1text h3{
+    color: #000;
+  } 
+  #content1 .cont1img{
+    width: 100%;
+    margin-left: 0;    
+  }
+  #content2{
+    margin: 400px auto 0;
+    width: 100vw;
+  }
+  #content2 h2{
+    padding:0 3rem;
+  }
+  #content2 ul{
+    flex-wrap: wrap;
+    justify-content: center;    
+  }
+  #content2 ul li{
+    width: 45%;
+    padding: 10px;
+  }
+  #content3{
+    margin-top: 300px;
+    padding:6rem 3rem;
+  }
+  footer .align{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
